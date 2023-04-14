@@ -1,0 +1,22 @@
+[package]
+name = "blue_engine_iced"
+version = "0.4.2"
+edition = "2021"
+description = "egui library for Blue Engine"
+keywords = ["gui", "blue_engine", "iced"]
+categories = ["gui", "game-development", "game-engines", "rendering"]
+repository = "https://github.com/AryanpurTech/BlueEngineICED"
+license = "Apache-2.0"
+
+[lib]
+name = "blue_engine_iced"
+
+[dependencies]
+#blue_engine = { version = "0.4", default-features = false }
+blue_engine = { path = "../Blue Engine", default-features = false }
+iced_wgpu = { version = "0.10.0" }
+iced_winit = { version = "0.9.1" }
+
+[[example]]
+name = "hello_gui"
+path = "examples/hello_gui.rs"
